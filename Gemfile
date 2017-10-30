@@ -5,6 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# fix 'cannot load such file -- bcrypt_ext' on windows
+gem 'bcrypt', git: 'http://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt'
+
+# devise gem for managing users
+gem 'devise'
+
 # use bootstrap
 gem 'bootstrap'
 
@@ -52,7 +58,7 @@ group :development do
 end
 
 group :production do
-	gem 'pg'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

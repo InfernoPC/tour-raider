@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  boi: MyText
+  gw2_account: MyString
+  discord_account: MyString
+
+two:
+  name: MyString
+  boi: MyText
+  gw2_account: MyString
+  discord_account: MyString

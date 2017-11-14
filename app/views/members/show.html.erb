@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Boi:</strong>
+  <%= @member.boi %>
+</p>
+
+<p>
+  <strong>Gw2 account:</strong>
+  <%= @member.gw2_account %>
+</p>
+
+<p>
+  <strong>Discord account:</strong>
+  <%= @member.discord_account %>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

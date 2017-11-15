@@ -20,5 +20,5 @@
   <%= @member.discord_account %>
 </p>
 
-<%= link_to 'Edit', edit_member_path(@member.name) %> |
-<%= link_to 'Back', members_path %>
+<%= link_to 'Edit', edit_member_path(@member.name), class: 'btn btn-primary' %>
+<%= link_to 'Back', members_path, class: 'btn btn-secondary' %>

@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Members</h1>
+
+<%= link_to 'New Member', new_member_path, class: 'btn btn-primary' if user_signed_in? %>
+
+<br>
 
 <table class="table table-striped table-hover">
   <thead>
@@ -21,15 +23,13 @@
         <td><%= member.gw2_account %></td>
         <td><%= member.discord_account %></td>
 	<% if user_signed_in? %>
-        	<td><%= link_to 'Show', member_path(member.name) %></td>
-        	<td><%= link_to 'Edit', edit_member_path(member.name) %></td>
-        	<td><%= link_to 'Destroy', member_path(member.name), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        	<td><%= link_to 'Show', member_path(member), class: 'btn btn-outline-info' %></td>
+        	<td><%= link_to 'Edit', edit_member_path(member), class: 'btn btn-outline-warning' %></td>
+        	<td><%= link_to 'Destroy', member_path(member), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %></td>
 	<% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Member', new_member_path if user_signed_in? %>

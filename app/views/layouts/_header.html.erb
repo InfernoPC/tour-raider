@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">TOUR RAIDER</a>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+  	<%= image_tag "brand.svg" %>TOUR RAIDER
+  </a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="nav navbar-nav mr-auto navbar-left">
@@ -10,7 +12,7 @@
     <ul class="nav navbar-nav navbar-right">
 	<li>
 		<% if user_signed_in? %>
-			<span>Hi, <%= current_user.email %>.</span>
+			Hi, <%= current_user.email %>.
 			<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
 		<% else %>
 			<%= link_to 'Login', new_user_session_path %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :bosses, param: :name
   resources :members, param: :name
   devise_for :users
   

@@ -1,0 +1,13 @@
+
+<p>
+  <strong>Wing:</strong>
+  <%= @boss.wing %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @boss.name %>
+</p>
+
+<%= link_to 'Edit', edit_boss_path(@boss), class: 'btn btn-primary' %>
+<%= link_to 'Back', bosses_path, class: 'btn btn-secondary' %>

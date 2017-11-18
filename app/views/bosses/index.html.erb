@@ -1,0 +1,26 @@
+<h1>Bosses</h1>
+
+<%= link_to 'New Boss', new_boss_path, class:'btn btn-primary' %>
+<br>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Wing</th>
+      <th>Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bosses.each do |boss| %>
+      <tr>
+        <td><%= boss.wing %></td>
+        <td><%= link_to boss.name, boss_path(boss) %></td>
+        <td><%= link_to 'Edit', edit_boss_path(boss), class: 'btn btn-outline-warning' %></td>
+        <td><%= link_to 'Destroy', boss, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

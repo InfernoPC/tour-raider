@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #fcdfa2;">
   <a class="navbar-brand" href="/">
   	<%= image_tag "brand.svg" %>TOUR RAIDER
   </a>
@@ -7,17 +7,24 @@
     <ul class="nav navbar-nav mr-auto navbar-left">
       <li class="nav-item">
         <a class="nav-link" href="/members">Members</a>
-      </li>
+	  </li>
+	  <% if user_signed_in? %>
+	  <li class="nav-item">
+			  <a class="nav-link" href="/bosses">Bosses</a>
+	  </li>
+	  <% end %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-	<li>
-		<% if user_signed_in? %>
-			Hi, <%= current_user.email %>.
-			<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-		<% else %>
-			<%= link_to 'Login', new_user_session_path %>
-		<% end %>
-	</li>
+	    <li>
+			<span class="navbar-text">
+			<% if user_signed_in? %>
+				Hi, <%= current_user.email %>.
+				<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+			<% else %>
+				<%= link_to 'Login', new_user_session_path %>
+			<% end %>
+			<span>
+		</li>
     </ul>
   </div>
 </nav>

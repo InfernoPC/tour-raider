@@ -1,1 +1,13 @@
 <%= image_tag "https://i.imgur.com/BZKbvKl.png", style: 'width: 100%' %>
+<link rel="stylesheet" type="text/css" href="https://dps.report/css/dropzone.css">
+<link rel="stylesheet" type="text/css" href="https://dps.report/css/dpsreports.css">
+<script async type="text/javascript" src="https://www.google-ayalytics.com/analytics.js"></script>
+<script data-cfasync="false" type="text/javascript" src="https://dps.report/js/dropzone.js"></script>
+<script data-cfasync="false" type="text/javascript" src="https://dps.report/js/dpsreports.js"></script>
+
+<br>
+<form action="https://dps.report/uploadContent" type="POST" class="dropzone dz-clickable" id="myDropzone">
+	<div class="dz-default dz-message">
+		<span>Drop files here to upload.</span>
+	</div>
+</form>
